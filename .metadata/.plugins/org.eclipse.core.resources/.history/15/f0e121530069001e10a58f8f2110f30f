@@ -1,0 +1,73 @@
+package Day01;
+
+import java.util.Scanner;
+
+abstract class Shape {
+	private Shape next;
+	public Shape() {next=null;}
+	public void setNext(Shape obj) { next = obj; } //링크연결
+	public Shape getNext() { return next; }
+	public abstract void draw(); //추상메소드
+}
+
+class Line extends Shape {
+	public void draw() {
+		System.out.println("Line");
+	}
+}
+class Rect extends Shape {
+	public void draw() {
+		System.out.println("Rect");
+	}
+}
+class Circle extends Shape {
+	public void draw() {
+		System.out.println("Circle");
+	}
+}
+
+class GraphicEditor {
+	Scanner s = new Scanner(System.in);
+	String name;
+	Shape start,tail=null;
+	public GraphicEditor(String name) {
+		this.name=name;
+	}
+	public void run() {
+		System.out.println("그래픽 에디터" + name + "을 실행합니다.");
+		int choice = 0;
+		while (choice != 4) {
+			int type, index;
+			System.out.print("삽입(1), 삭제(2), 모두 보기(3), 종료(4)>>");
+			choice = s.nextInt();
+			switch (choice) {
+				case 1:
+					System.out.print("Line, Rect, Circle");
+					int type = s.nextInt();
+					if (type<1 || type>3) {
+						System.out.println("잘못 선택하셨습니다.");
+						break;
+					}
+					insert(type);
+					break;
+				case 2:
+					System.out.print("삭제할 도형의 위치>>");
+					index = s.nextInt();
+					if(!delete(index)) {
+						System.out.println("삭제할 수 없습니다.");
+					}
+					break;
+			}
+			
+		}
+	}
+}
+
+public class GraphicEditorEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

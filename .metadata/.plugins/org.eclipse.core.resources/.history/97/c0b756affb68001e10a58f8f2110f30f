@@ -1,0 +1,33 @@
+package Day01;
+
+abstract class Shape {
+	private Shape next;
+	public Shape() {next=null;}
+	public void setNext(Shape obj) { next = obj; } //링크연결
+	public Shape getNext() { return next; }
+	public abstract void draw(); //추상메소드
+}
+
+class Line extends Shape {
+	public void draw() {
+		System.out.println("Line");
+	}
+}
+class Rect extends Shape {
+	public void draw() {
+		System.out.println("Rect");
+	}
+}
+class Circle extends Shape {
+	public void draw() {
+		System.out.println("Circle");
+	}
+}
+public class GraphicEditor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package Day01;
+
+interface Stack {
+	int length();
+	int capacity();
+	String pop();
+	boolean push(String val);
+}
+
+public class StackApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
