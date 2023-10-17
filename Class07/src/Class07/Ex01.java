@@ -23,7 +23,7 @@ public class Ex01 {
 
 		int sum=0;
 		for (int i=0;i<v.size();i++) {
-			int n = v.get(i);
+			int n = v.elementAt(i);
 			sum += n;
 		}
 		System.out.println();
