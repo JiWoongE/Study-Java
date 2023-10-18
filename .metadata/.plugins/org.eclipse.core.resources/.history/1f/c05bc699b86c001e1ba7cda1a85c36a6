@@ -1,0 +1,28 @@
+package BAEKJOONEx;
+//N개의 정수가 주어진다. 이때, 최솟값과 최댓값을 구하는 프로그램을 작성하시오.
+import java.util.Scanner;
+
+public class ArrayEx03 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int [] arr = new int[N];
+		for (int i=0;i<arr.length;i++) {
+			int a = sc.nextInt();
+			arr[i] = a;
+		}
+		int max=0;
+		int min=0;
+		for (int i=0;i<arr.length;i++) {
+			if (arr[i]>=arr[0])
+				max = arr[i];
+			if (arr[i]<=arr[0])
+				min = arr[i];
+		}
+		System.out.print(max);
+		System.out.println(" ");
+		System.out.print(min);
+	}
+
+}
