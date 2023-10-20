@@ -15,7 +15,6 @@ public class ForEx04 {
 			int b = sc.nextInt();
 			sum += a*b;
 		}
-		System.out.println(sum);
 		if(sum == x) System.out.println("Yes");
 		else System.out.println("No");
 
