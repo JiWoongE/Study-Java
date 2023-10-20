@@ -13,7 +13,10 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-.log
+*.log
+*.lock
+version.ini
+
 # External tool builders
 .externalToolBuilders/
 
