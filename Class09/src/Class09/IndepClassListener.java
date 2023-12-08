@@ -11,7 +11,7 @@ public class IndepClassListener extends JFrame {
 		Container c = getContentPane();
 		c.setLayout(new FlowLayout());
 		JButton btn = new JButton("Action");
-		btn.addActionListener(new MyActionListener());
+		btn.addActionListener(new MyActionListener()); //btn에 액션리스너 등록
 		c.add(btn);
 	
 		setSize(350,150);
